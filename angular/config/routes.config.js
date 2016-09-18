@@ -60,5 +60,13 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                     templateUrl: getView('reset-password')
                 }
             }
+        })
+        .state('app.create_app',{
+            url:'/createapp',
+            views:{
+                'main@': {
+                    templateUrl: getView('create_app_form')
+                }
+            }
         });
 }

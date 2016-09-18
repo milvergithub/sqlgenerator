@@ -14,4 +14,4 @@ export const AppShellComponent = {
     controller: AppShellController,
     controllerAs: 'vm',
     bindings: {}
-}
+};
