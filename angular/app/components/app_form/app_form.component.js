@@ -1,11 +1,24 @@
 class AppFormController{
-    constructor(){
+    constructor($log,ConnectionService){
         'ngInject';
-
-        //
+        this.$log=$log;
+        this.ConnectionService=ConnectionService;
+        this.project={
+            name:"",
+            driver:"",
+            database:"",
+            host:"",
+            port:"",
+            username:"",
+            password:""
+        }
     }
 
     $onInit(){
+    }
+
+    connectionTest(){
+        this.ConnectionService.connectionDBTest(this.project);
     }
 }
 

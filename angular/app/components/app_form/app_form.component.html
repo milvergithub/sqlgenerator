@@ -1,0 +1,54 @@
+<md-card>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">Create project</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+        <md-input-container class="md-icon-float md-block">
+            <label>name</label>
+            <md-icon md-font-icon="fa fa-2x fa-tag" class="name"></md-icon>
+            <input ng-model="vm.project.name" type="text">
+        </md-input-container>
+
+        <md-input-container md-no-float class="md-block">
+            <label>dbms</label>
+            <md-icon md-font-icon="fa fa-2x fa-database"></md-icon>
+            <input ng-model="vm.project.driver" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>database</label>
+            <md-icon md-font-icon="fa fa-2x fa-tags" class="database"></md-icon>
+            <input ng-model="vm.project.database" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>host</label>
+            <md-icon md-font-icon="fa fa-2x fa-globe"></md-icon>
+            <input ng-model="vm.project.host" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>port</label>
+            <md-icon md-font-icon="fa fa-2x fa-plug"></md-icon>
+            <input ng-model="vm.project.port" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>user</label>
+            <md-icon md-font-icon="fa fa-2x fa-user"></md-icon>
+            <input ng-model="vm.project.username" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>password</label>
+            <md-icon md-font-icon="fa fa-2x fa-key"></md-icon>
+            <input ng-model="vm.project.password" type="password">
+        </md-input-container>
+    </md-card-content>
+    <div class="md-actions" layout="row" layout-align="end center">
+        <md-button class="md-raised md-warn" ng-click="vm.connectionTest()">test connecction</md-button>
+        <md-button class="md-raised md-primary" ng-click="">create</md-button>
+    </div>
+</md-card>
