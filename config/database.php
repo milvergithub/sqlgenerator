@@ -76,6 +76,16 @@ return [
             'prefix'   => '',
             'schema'   => 'public',
         ],
+        'external' => [
+            'driver'   => 'pgsql',
+            'host'     => 'localhost',
+            'database' => 'sqlgenerator',
+            'username' => 'postgres',
+            'password' => 'postgres',
+            'charset'  => 'utf8',
+            'prefix'   => '',
+            'schema'   => 'public',
+        ],
 
         'sqlsrv' => [
             'driver'   => 'sqlsrv',

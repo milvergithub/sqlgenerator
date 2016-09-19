@@ -7,18 +7,12 @@ export class ConnectionService{
     }
 
     submit(){
-        var data = {
-            name:this.name,
-            topic: this.topic
-        }
-        this.API.all('posts').post(data).then((response) => {
-            this.ToastService.show('Post added successfully');
-        });
+
     }
 
     connectionDBTest(project){
         this.API.all('connectiontest').post(project).then(function (data) {
-
+            console.log(data);
         });
     }
 }
