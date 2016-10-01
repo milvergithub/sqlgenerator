@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Response;
+use App\Http\ResponseManager\ResponseManager;
 use App\Http\Requests;
 
 class ConnectionController extends Controller
@@ -24,10 +26,12 @@ class ConnectionController extends Controller
             'database.connections.external.password' => $request->input('password')
         ]);
         $connection = config('database.connections.external');
-        if (DB::connection('external')) {
-
+        if (DB::connection('external')->getDatabaseName()) {
+//            return response()->json($connection);
+            return Response::json(ResponseManager::makeResult($connection, "Consultas retrieved successfully."));
+        }else{
+            return "fail";
         }
-        return response()->json($connection);
     }
 
     /**

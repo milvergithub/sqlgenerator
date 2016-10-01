@@ -1,8 +1,9 @@
 class AppFormController{
-    constructor($log,ConnectionService){
+    constructor($log,ConnectionService,ApplicationService){
         'ngInject';
         this.$log=$log;
         this.ConnectionService=ConnectionService;
+        this.ApplicationService=ApplicationService;
         this.project={
             name:"",
             driver:"",
@@ -19,6 +20,10 @@ class AppFormController{
 
     connectionTest(){
         this.ConnectionService.connectionDBTest(this.project);
+    }
+    
+    createApp(){
+        this.ApplicationService.createApplication(this.project)
     }
 }
 
