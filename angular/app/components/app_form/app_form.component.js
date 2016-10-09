@@ -22,6 +22,10 @@ class AppFormController{
         this.ConnectionService.connectionDBTest(this.project);
     }
     
+    connectionApp(){
+        this.ConnectionService.connectionProject(this.project);
+    }
+    
     createApp(){
         this.ApplicationService.createApplication(this.project)
     }

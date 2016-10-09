@@ -15,5 +15,10 @@ export class ConnectionService{
             console.log(data);
         });
     }
+    connectionProject(project){
+        this.API.one('projects').get().then(function (data) {
+            
+        });
+    }
 }
 

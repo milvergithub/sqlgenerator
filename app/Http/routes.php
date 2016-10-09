@@ -37,3 +37,14 @@ $api->group(['middleware' => ['api']], function ($api) {
 $api->group(['middleware' => ['api', 'api.auth']], function ($api) {
 
 });
+
+
+/*
+|--------------------------------------------------------------------------
+| API routes
+|--------------------------------------------------------------------------
+*/
+
+Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
+    require config('infyom.laravel_generator.path.api_routes');
+});
