@@ -159,12 +159,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dingo/api.git",
-                "reference": "242411efbb9f01104a00b780c4defb2c18a45856"
+                "reference": "950b37f1e1cd1c99366b096436c2ab4dd7bff7b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dingo/api/zipball/242411efbb9f01104a00b780c4defb2c18a45856",
-                "reference": "242411efbb9f01104a00b780c4defb2c18a45856",
+                "url": "https://api.github.com/repos/dingo/api/zipball/950b37f1e1cd1c99366b096436c2ab4dd7bff7b1",
+                "reference": "950b37f1e1cd1c99366b096436c2ab4dd7bff7b1",
                 "shasum": ""
             },
             "require": {
@@ -226,7 +226,7 @@
                 "laravel",
                 "restful"
             ],
-            "time": "2016-09-02 05:51:07"
+            "time": "2016-10-13 00:21:28"
         },
         {
             "name": "dingo/blueprint",
@@ -512,12 +512,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/InfyOmLabs/laravel-generator.git",
-                "reference": "064a7aac6d7e74728011a571e5108746699301f1"
+                "reference": "e9eeb080615db9272b103b4daa93e2d7474b7030"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/064a7aac6d7e74728011a571e5108746699301f1",
-                "reference": "064a7aac6d7e74728011a571e5108746699301f1",
+                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/e9eeb080615db9272b103b4daa93e2d7474b7030",
+                "reference": "e9eeb080615db9272b103b4daa93e2d7474b7030",
                 "shasum": ""
             },
             "require": {
@@ -563,7 +563,7 @@
                 "test",
                 "view"
             ],
-            "time": "2016-09-24 13:01:31"
+            "time": "2016-10-09 15:18:51"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -927,16 +927,16 @@
         },
         {
             "name": "laravelangular/generators",
-            "version": "2.7.2",
+            "version": "2.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jadjoubran/laravel-ng-artisan-generators.git",
-                "reference": "0ddb7bf3e8768ce9aee99f8545990f47973baed7"
+                "reference": "820a460e503f9beeb799e6bde507e24b4082e1e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jadjoubran/laravel-ng-artisan-generators/zipball/0ddb7bf3e8768ce9aee99f8545990f47973baed7",
-                "reference": "0ddb7bf3e8768ce9aee99f8545990f47973baed7",
+                "url": "https://api.github.com/repos/jadjoubran/laravel-ng-artisan-generators/zipball/820a460e503f9beeb799e6bde507e24b4082e1e5",
+                "reference": "820a460e503f9beeb799e6bde507e24b4082e1e5",
                 "shasum": ""
             },
             "require": {
@@ -963,7 +963,7 @@
                 }
             ],
             "description": "Angular generators for Artisan",
-            "time": "2016-09-03 20:37:16"
+            "time": "2016-10-10 17:23:11"
         },
         {
             "name": "laravelcollective/html",
@@ -1021,16 +1021,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.27",
+            "version": "1.0.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "50e2045ed70a7e75a5e30bc3662904f3b67af8a9"
+                "reference": "a9663643ff2d16d7f66ed1e0d3212c5491bc9044"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/50e2045ed70a7e75a5e30bc3662904f3b67af8a9",
-                "reference": "50e2045ed70a7e75a5e30bc3662904f3b67af8a9",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a9663643ff2d16d7f66ed1e0d3212c5491bc9044",
+                "reference": "a9663643ff2d16d7f66ed1e0d3212c5491bc9044",
                 "shasum": ""
             },
             "require": {
@@ -1100,7 +1100,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-08-10 08:55:11"
+            "time": "2016-10-07 12:20:37"
         },
         {
             "name": "league/fractal",
@@ -1829,16 +1829,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0"
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/5277094ed527a1c4477177d102fe4c53551953e0",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
                 "shasum": ""
             },
             "require": {
@@ -1872,7 +1872,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-09-19 16:02:08"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "psy/psysh",
