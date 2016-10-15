@@ -16,7 +16,7 @@ export class ConnectionService{
         });
     }
     connectionProject(project){
-        this.API.one('projects').get().then(function (data) {
+        this.API.one('applications').get().then(function (data) {
             
         });
     }

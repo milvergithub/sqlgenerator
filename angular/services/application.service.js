@@ -8,7 +8,7 @@ export class ApplicationService{
     }
     
     createApplication(project){
-        this.API.all('application/create').post(project).then(function (data) {
+        this.API.all('applications').post(project).then(function (data) {
             console.log(data);
         });
     }

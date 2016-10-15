@@ -7,11 +7,13 @@ class AppFormController{
         this.project={
             name:"",
             driver:"",
+            schema:"public",
             database:"",
             host:"",
             port:"",
             username:"",
-            password:""
+            password:"",
+            date_created:new Date()
         }
     }
 

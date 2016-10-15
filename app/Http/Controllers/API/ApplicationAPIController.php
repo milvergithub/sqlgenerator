@@ -38,9 +38,8 @@ class ApplicationAPIController extends AppBaseController
     {
         $this->applicationRepository->pushCriteria(new RequestCriteria($request));
         $this->applicationRepository->pushCriteria(new LimitOffsetCriteria($request));
-        $applications = $this->applicationRepository->all();
-
-        return $this->sendResponse($applications->toArray(), 'Applications retrieved successfully');
+        $applications = $this->applicationRepository->paginate(10);
+        return $this->sendResponse($applications->toArray(), trans('messages.Application'));
     }
 
     /**

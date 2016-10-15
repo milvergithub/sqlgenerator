@@ -63,7 +63,6 @@ class Application extends Model
         'port' => 'required',
         'username' => 'required',
         'password' => 'required',
-        'date_created' => 'required'
     ];
 
     
