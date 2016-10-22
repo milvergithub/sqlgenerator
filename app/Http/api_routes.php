@@ -18,3 +18,5 @@
 Route::resource('applications', 'ApplicationAPIController');
 
 Route::resource('tables', 'TableAPIController');
+
+Route::resource('columns', 'ColumnAPIController');

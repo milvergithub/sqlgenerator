@@ -37,9 +37,12 @@ class AppBaseController extends BaseController
         }
     }
 
-    public function sendResponse($result, $message)
+    public function sendResponse($result, $message,$isList=null)
     {
-        return Response::json(ResponseUtil::makeResponse($message, $result));
+        if ($isList==null)
+            return Response::json(ResponseUtil::makeResponse($message, $result));
+        else
+            return Response::json(ResponseUtil::makeResponseList($message, $result));    
     }
 
     public function sendError($error, $code = 404)

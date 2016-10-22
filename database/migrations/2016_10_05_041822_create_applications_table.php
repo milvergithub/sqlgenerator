@@ -22,8 +22,10 @@ class CreateApplicationsTable extends Migration
             $table->string('host');
             $table->integer('port');
             $table->string('username');
-            $table->string('password');
-            $table->string('date_created');
+            $table->string('password')->nullable();
+            $table->timestamp('date_created')->nullable()->useCurrent();
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

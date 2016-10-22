@@ -18,6 +18,8 @@ class CreateTablesTable extends Migration
             $table->string('tablename');
             $table->string('level');
             $table->integer('cantidad');
+            $table->integer('application_id')->unsigned();
+            $table->foreign('application_id')->references('id')->on('applications')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });
