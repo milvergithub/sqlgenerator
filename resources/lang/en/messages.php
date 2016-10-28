@@ -7,7 +7,10 @@
  */
 return [
 
-    'Application' => 'Applications retrieved successfully',
+    'application' => [
+        'list'=>'Applications retrieved successfully',
+        'saved'=>'Application saved successfully'
+    ],
     'next'     => 'Next &raquo;',
 
 ];

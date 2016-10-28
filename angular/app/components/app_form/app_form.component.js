@@ -1,6 +1,7 @@
 class AppFormController{
-    constructor($log,ConnectionService,ApplicationService){
+    constructor($auth,$log,ConnectionService,ApplicationService){
         'ngInject';
+        this.$auth=$auth;
         this.$log=$log;
         this.ConnectionService=ConnectionService;
         this.ApplicationService=ApplicationService;
@@ -13,6 +14,7 @@ class AppFormController{
             port:"",
             username:"",
             password:"",
+            user_id:"1",
             date_created:new Date()
         }
     }

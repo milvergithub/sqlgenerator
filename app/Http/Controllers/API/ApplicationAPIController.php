@@ -39,7 +39,7 @@ class ApplicationAPIController extends AppBaseController
         $this->applicationRepository->pushCriteria(new RequestCriteria($request));
         $this->applicationRepository->pushCriteria(new LimitOffsetCriteria($request));
         $applications = $this->applicationRepository->paginate(10);
-        return $this->sendResponse($applications->toArray(), trans('messages.Application'),true);
+        return $this->sendResponse($applications->toArray(), trans('messages.application.list'),true);
     }
 
     /**
@@ -56,7 +56,7 @@ class ApplicationAPIController extends AppBaseController
 
         $applications = $this->applicationRepository->create($input);
 
-        return $this->sendResponse($applications->toArray(), 'Application saved successfully');
+        return $this->sendResponse($applications->toArray(), trans('messages.application.saved'));
     }
 
     /**

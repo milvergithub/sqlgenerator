@@ -19,7 +19,8 @@ class ApplicationRepository extends BaseRepository
         'port',
         'username',
         'password',
-        'date_created'
+        'date_created',
+        'user_id'
     ];
 
     /**

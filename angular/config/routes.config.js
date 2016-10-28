@@ -4,7 +4,9 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 	let getView = (viewName) => {
 		return `./views/app/pages/${viewName}/${viewName}.page.html`;
 	};
-
+    let getController = (controllerName) => {
+        return `${controllerName}Controller as vm`;
+    };
 	$urlRouterProvider.otherwise('/');
 
 	$stateProvider
@@ -25,7 +27,8 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             url: '/',
             views: {
                 'main@': {
-                    templateUrl: getView('landing')
+                    templateUrl: getView('landing'),
+                    controller:getController('Landing')
                 }
             }
         })

@@ -1,213 +1,320 @@
-@import "../../../material/project";
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=latin-ext';
 
-body{
-    font-family: 'Lato', sans-serif;
+* {
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.Landing{
-    height: 100%;
+html {
+  width: 100%;
+  height: 100%;
 }
 
-.Landing-cover{
-    background-color: #00A4C6;
-    background-image: url('/img/sql-data-generator.png');
-    background-size: cover;
-    width: 100%;
-    height: 700px;
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #212121;
+  background-color: #E0E0E0;
 }
 
-.Landing-heading,
-.Landing-subtitle{
-    color: white;
+.indicator {
+  cursor: pointer;
 }
 
-.Landing-headingLight{
-    font-weight: 300;
-    letter-spacing: -3px;
+.card {
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+}
+.card.card-visitors {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: calc((100vh - 400px) / 2) auto;
 }
 
-.Landing-heading{
-    color: white;
-    margin-top: 20px;
-    font-size: 60px;
-    text-align: center;
-    letter-spacing: -1px;
+.card.card-visitors input[type="checkbox"]#card-visitors-indicator {
+  display: none;
 }
 
-.Landing-subtitle{
-    opacity: 0.7;
-    text-align: center;
+.card.card-visitors input[type="checkbox"]#card-visitors-indicator:checked + .header label.indicator {
+  top: 30%;
+  right: calc(50% - 25px);
+  margin: calc(-30% - 25px) calc(50% - 25px) 0 0;
+  background-color: transparent;
+  -webkit-transition: top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, right 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, background-color 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s, margin 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  -moz-transition: top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, right 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, background-color 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s, margin 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  -o-transition: top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, right 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, background-color 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s, margin 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  -ms-transition: top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, right 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, background-color 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s, margin 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  transition: top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, right 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, background-color 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s, margin 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
 }
 
-.Landing-getStarted{
-    padding: 12px 30px;
-    font-weight: bold;
-    color: $black !important;
-    border-radius: 4px;
-    transition: box-shadow 250ms;
+.card.card-visitors input[type="checkbox"]#card-visitors-indicator:checked + .header label.indicator .open {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0.2s;
+  -moz-transition: opacity 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0.2s;
+  -o-transition: opacity 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0.2s;
+  -ms-transition: opacity 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0.2s;
+  transition: opacity 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0.2s;
 }
 
-.Landing-getStarted:hover{
-    box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),
-    0 7px 10px 1px rgba(0,0,0,.14),
-    0 2px 16px 1px rgba(0,0,0,.12) !important;
+.card.card-visitors input[type="checkbox"]#card-visitors-indicator:checked + .header label.indicator .close {
+  transform: scale(1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  -moz-transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  -o-transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  -ms-transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
 }
 
-.Landing-laravelAngular{
-    position: relative;
+.card.card-visitors input[type="checkbox"]#card-visitors-indicator:checked + .header .content .data {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s;
+  -moz-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s;
+  -o-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s;
+  -ms-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s;
+  transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s;
 }
 
-.Landing-ampersand{
-    font-size: 50px;
-    color: $brand;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-weight: 300;
+.card.card-visitors input[type="checkbox"]#card-visitors-indicator:checked + .header .content .data .graph .vertical .day .line-container {
+  max-height: 80%;
+  -webkit-transition: max-height 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  -moz-transition: max-height 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  -o-transition: max-height 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  -ms-transition: max-height 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
+  transition: max-height 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0.9s;
 }
 
-.Landing-angular{
-    background-color: $background;
-    border-left: 1px solid $border;
+.card.card-visitors input[type="checkbox"]#card-visitors-indicator:checked + .header .content .float {
+  opacity: 1;
+  transform: scale(10);
+  -webkit-transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, opacity 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s;
+  -moz-transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, opacity 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s;
+  -o-transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, opacity 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s;
+  -ms-transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, opacity 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s;
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, opacity 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s;
 }
 
-.Landing-laravel,
-.Landing-angular{
-    text-align: center;
-    color: $navy;
-    border-bottom: 1px solid $border;
+.card.card-visitors .header {
+  width: 100%;
+  height: 60%;
+  background-color: #E91E63;
 }
 
-.Landing-laravelAngular-title{
-    padding-top: 30px;
-    margin-bottom: 15px;
-    font-weight: 300;
-    letter-spacing: -1px;
-    color: $navy;
+.card.card-visitors .header label.indicator {
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  top: calc(60% - 25px);
+  right: 20px;
+  margin: 0;
+  border-radius: 100%;
+  background-color: #FF9800;
+  -webkit-transition: top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, right 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, background-color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, margin 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s;
+  -moz-transition: top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, right 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, background-color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, margin 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s;
+  -o-transition: top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, right 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, background-color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, margin 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s;
+  -ms-transition: top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, right 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, background-color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, margin 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s;
+  transition: top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, right 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s, background-color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, margin 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s;
 }
 
-.Landing-laravelAngular-subtitle{
-    color: $black;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-weight: 300;
+.card.card-visitors .header label.indicator .open {
+  position: absolute;
+  margin: 11.5px 16px;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s;
+  -moz-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s;
+  -o-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s;
+  -ms-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s;
+  transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0.6s;
 }
 
-.DemoCode{
-    font-family: "Lucida Console", Monaco, monospace;
-    overflow: auto !important;
-    padding: 10px 10px 10px 20px;
-    line-height: 1.428571429;
-    color: #333333;
-    word-break: break-all;
-    word-wrap: break-word;
-    background-color: #f5f5f5;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    width: 80%;
-    margin: 30px auto 100px;
-    text-align: left;
-    font-size: 14px;
+.card.card-visitors .header label.indicator .close {
+  margin: 12.5px 17.5px;
+  transform: scale(0);
+  -webkit-transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -moz-transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -o-transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -ms-transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
 }
 
-.DemoCode-highlight{
-    color: #DD4A68;
+.card.card-visitors .header .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.DemoCode-comment{
-    color: $grey;
+.card.card-visitors .header .content > * {
+  color: #FFFFFF;
+  font-weight: 500;
 }
 
-.DemoCode-operator{
-    color: $grey;
+.card.card-visitors .header .content .data {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #FF9800;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -moz-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -o-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -ms-transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
 }
 
-.DemoCode-string{
-    color: #690;
+.card.card-visitors .header .content .data .top {
+  width: 100%;
+  height: 40%;
 }
 
-.DemoCode-secondary{
-    color: #07A;
+.card.card-visitors .header .content .data .top .title {
+  width: 100%;
 }
 
-.Landing-features{
-    text-align: center;
-    margin: 60px 10px;
+.card.card-visitors .header .content .data .graph {
+  position: relative;
+  width: calc(100% - 40px);
+  height: 60%;
+  margin: 0 20px 20px 20px;
 }
 
-.Landing-featuresMainTitle{
-    font-weight: 300;
-    letter-spacing: -1px;
-    margin-bottom: 15px;
-    color: $navy;
+.card.card-visitors .header .content .data .graph .horizontal {
+  width: 100%;
+  height: 100%;
 }
 
-.Landing-featuresMainDescription{
-    width: 70%;
-    margin: 0 auto 30px;
-    color: $black;
-    font-weight: 300;
+.card.card-visitors .header .content .data .graph .horizontal div {
+  height: 20%;
 }
 
-.Landing-featuresEntry{
-    width: 176px;
-    height: 176px;
-    border-radius: 50%;
-    margin: 40px auto 20px;
+.card.card-visitors .header .content .data .graph .horizontal div hr {
+  border: 1px solid #FFFFFF;
+  opacity: .5;
 }
 
-.Landing-featuresEntry-icon{
-    height: 100%;
+.card.card-visitors .header .content .data .graph .horizontal div p {
+  opacity: .5;
 }
 
-.Landing-featuresTitle{
-    color: $navy;
-    letter-spacing: -1px;
-    margin-top: 40px;
+.card.card-visitors .header .content .data .graph .vertical {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  margin-left: 10%;
 }
 
-.Landing-featuresDescription{
-    padding-top: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-weight: 300;
-    color: $black;
+.card.card-visitors .header .content .data .graph .vertical .day {
+  position: relative;
+  width: calc(100% / 14);
+  height: 100%;
 }
 
-.Landing-featuresEntry--restful{
-    background-color: $brand;
+.card.card-visitors .header .content .data .graph .vertical .day .line-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  width: 2px;
+  height: 80%;
+  max-height: 0;
+  bottom: 20%;
+  margin: 0 calc((100% - 2px) / 2);
+  -webkit-transition: max-height 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -moz-transition: max-height 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -o-transition: max-height 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -ms-transition: max-height 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  transition: max-height 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
 }
 
-.Landing-featuresEntry--jwt{
-    background-color: #EF704D;
+.card.card-visitors .header .content .data .graph .vertical .day .line-container .line {
+  width: 100%;
+  background-color: #FFFFFF;
 }
 
-.Landing-featuresEntry--generators{
-    background-color: #25C0CC;
+.card.card-visitors .header .content .data .graph .vertical .day p {
+  position: absolute;
+  height: 20%;
+  bottom: 0;
+  opacity: .5;
 }
 
-.Landing-featuresEntry--restful md-icon{
-    width: 100px;
-}
-.Landing-featuresEntry--jwt md-icon{
-    width: 80px;
+.card.card-visitors .header .content .data .graph .vertical .day .hidden {
+  opacity: 0;
 }
 
-.Landing-featuresEntry--generators md-icon{
-    width: 80px;
+.card.card-visitors .header .content .title {
+  margin-top: 15px;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
 }
 
-/*
-This is a terrible temporary hack,
-to fix layout issues with flex on iOS (chrome & safari)
-Make sure to remove this when you modify this demo
-*/
-@media only screen and (max-width : 950px) {
-    .iOS-hack .flex-100,
-    .iOS-hack .flex-50,
-    .iOS-hack .flex-33{
-        flex: none !important;
-    }
+.card.card-visitors .header .content .date {
+  width: 100%;
+  opacity: .5;
+  text-align: center;
+}
+
+.card.card-visitors .header .content .float {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  right: calc(50% - 25px);
+  opacity: 0;
+  border-radius: 100%;
+  background-color: #FF9800;
+  -webkit-transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, opacity 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -moz-transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, opacity 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -o-transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, opacity 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  -ms-transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, opacity 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s, opacity 0s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+}
+
+.card.card-visitors .info {
+  width: calc(100% - 40px);
+  height: calc(40% - 80px);
+  padding: 40px 20px;
+  color: #9E9E9E;
+}
+
+.card.card-visitors .info .counter {
+  margin-top: 8px;
+  color: #212121;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.card.card-visitors .info .counter .unit {
+  font-size: 15px;
 }

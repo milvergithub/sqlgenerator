@@ -1,7 +1,8 @@
 export class ApplicationService{
     
-    constructor(API, $log, ToastService){
+    constructor($auth,API, $log, ToastService){
         'ngInject';
+        this.$auth=$auth;
         this.API=API;
         this.$log=$log;
         this.ToastService=ToastService;

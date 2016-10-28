@@ -11,3 +11,5 @@ import './index.components';
 import './index.directives';
 
 import './index.services';
+
+import './index.controllers';

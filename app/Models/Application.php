@@ -29,7 +29,8 @@ class Application extends Model
         'port',
         'username',
         'password',
-        'date_created'
+        'date_created',
+        'user_id'
     ];
 
     /**
@@ -46,7 +47,8 @@ class Application extends Model
         'port' => 'integer',
         'username' => 'string',
         'password' => 'string',
-        'date_created' => 'string'
+        'date_created' => 'string',
+        'user_id' => 'integer'
     ];
 
     /**
@@ -63,6 +65,7 @@ class Application extends Model
         'port' => 'required',
         'username' => 'required',
         'password' => 'required',
+        'user_id' => 'required',
     ];
 
     

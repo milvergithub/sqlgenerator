@@ -1,6 +1,7 @@
 export class ConnectionService{
-    constructor(API, $log, ToastService){
+    constructor($auth,API, $log, ToastService){
         'ngInject';
+        this.$auth=$auth;
         this.$log=$log;
         this.API=API;
         this.ToastService=ToastService;
@@ -16,6 +17,7 @@ export class ConnectionService{
         });
     }
     connectionProject(project){
+        this.$log.info(this.$auth.getToken());
         this.API.one('applications').get().then(function (data) {
             
         });
